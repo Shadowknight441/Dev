@@ -94,7 +94,10 @@ namespace Eco.Mods.TechTree
                 Localizer.DoStr("Rancher Skill Book"),
                 new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(CulinaryResearchPaperBasicItem), 3, typeof(HuntingSkill)),
+                    new IngredientElement("FriedVegetable", 9, true),
+                    new IngredientElement("CampfireSalad", 15, true),
+                    new IngredientElement(typeof(PlantFibersItem), 60, true),
+                    new IngredientElement("Raw Food", 45, true),
                 },
                 new List<CraftingElement>
                 {

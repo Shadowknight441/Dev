@@ -53,8 +53,6 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(MinimapComponent))]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(CraftingComponent))]
-    [RequireComponent(typeof(PowerGridComponent))]
-    [RequireComponent(typeof(PowerConsumptionComponent))]
     [RequireComponent(typeof(HousingComponent))]
     [RequireComponent(typeof(OccupancyRequirementComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
@@ -71,8 +69,6 @@ namespace Eco.Mods.TechTree
         {
             this.ModsPreInitialize();
             this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
-            this.GetComponent<PowerConsumptionComponent>().Initialize(10);
-            this.GetComponent<PowerGridComponent>().Initialize(5, new MechanicalPower());
             this.GetComponent<HousingComponent>().HomeValue = ButterChurnItem.homeValue;
             this.ModsPostInitialize();
         }
@@ -101,8 +97,6 @@ namespace Eco.Mods.TechTree
             TypeForRoomLimit                        = Localizer.DoStr(""),
             
         };
-
-        [NewTooltip(CacheAs.SubType, 7)] public static LocString PowerConsumptionTooltip() => Localizer.Do($"Consumes: {Text.Info(10)}w of {new MechanicalPower().Name} power.");
         [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 

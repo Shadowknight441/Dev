@@ -52,7 +52,7 @@ namespace Eco.Mods.TechTree
 				ingredients: new List<IngredientElement>
 				{
 					new IngredientElement(typeof(SheepItem), 1, true),
-					new IngredientElement(typeof(SheerItem), 1, true),
+					new IngredientElement(typeof(SheerItem), 3, true),
 				},
 
 				// Define our recipe output items.
@@ -61,6 +61,7 @@ namespace Eco.Mods.TechTree
 				items: new List<CraftingElement>
 				{
 					new CraftingElement<ShornWoolItem>(3)
+					new CraftingElement<SheerItem>(1.5f)
 				});
 			this.Recipes = new List<Recipe> { recipe };
 			this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.

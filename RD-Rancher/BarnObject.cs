@@ -66,7 +66,7 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(BarnItem);
         public override LocString DisplayName => Localizer.DoStr("Barn");
         public override TableTextureMode TableTexture => TableTextureMode.Wood;
-         private static string[] fuelTagList = new[] { "Bale" }; //noloc
+        private static string[] fuelTagList = new[] { "Bale" }; //noloc
 
         protected override void Initialize()
         {
@@ -101,7 +101,7 @@ namespace Eco.Mods.TechTree
             Category                                = HousingConfig.GetRoomCategory("Industrial"),
             TypeForRoomLimit                        = Localizer.DoStr(""),
             
-        };
+        }; 
 
         [NewTooltip(CacheAs.SubType, 7)] public static LocString PowerConsumptionTooltip() => Localizer.Do($"Consumes: {Text.Info(10)}w of {new HeatPower().Name} power from fuel.");
         [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
