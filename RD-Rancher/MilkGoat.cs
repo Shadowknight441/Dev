@@ -60,7 +60,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<MilkItem>(3)
+                    new CraftingElement<GoatMilkItem>(3)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.
@@ -102,7 +102,7 @@ namespace Eco.Mods.TechTree
     [Tag("Milk Goat")]
     [Tag("Milk")]
     [LocDescription("A Cow you can bread purley for meat production")] //The tooltip description for the item.
-    public partial class MilkItem : Item
+    public partial class GoatMilkItem : Item
     {
 
 
