@@ -71,7 +71,7 @@ namespace Eco.Mods.TechTree
                 this.ResourceList = new List<SpeciesResource>()
                 {
                     new SpeciesResource(typeof(BighornCarcassItem), new Range(1, 1)),
-                    new SpeciesResource(typeof(BabyBighornItem), new Range(0.0f, 0.75f)),
+                    new SpeciesResource(typeof(BabyBighornSheepItem), new Range(0.0f, 0.75f)),
                 };
                 this.ResourceBonusAtGrowth = 0.9f;
                 
