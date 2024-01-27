@@ -87,24 +87,4 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize();
     }
 
-    /// <summary>
-    /// <para>Server side item definition for the "BreedChicken" item.</para>
-    /// <para>More information about Item objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.Item.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
-    [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Breed Chicken")] // Defines the localized name of the item.
-    [Weight(100)] // Defines how heavy Board is.
-    [Ecopedia("Items", "Food", createAsSubPage: true)]
-    [Tag("Breed Chicken")]
-    [Tag("Chicken Carcass")]
-    [LocDescription("The future generation of the Chicken family")] //The tooltip description for the item.
-    public partial class BreedChickenItem : Item
-    {
-
-
-    }
 }
