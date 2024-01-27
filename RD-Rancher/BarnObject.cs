@@ -53,8 +53,8 @@ namespace Eco.Mods.TechTree
     [RequireComponent(typeof(MinimapComponent))]
     [RequireComponent(typeof(LinkComponent))]
     [RequireComponent(typeof(CraftingComponent))]
-    [RequireComponent(typeof(PowerGridComponent))]
-    [RequireComponent(typeof(PowerConsumptionComponent))]
+    [RequireComponent(typeof(FuelSupplyComponent))]
+    [RequireComponent(typeof(FuelConsumptionComponent))]
     [RequireComponent(typeof(HousingComponent))]
     [RequireComponent(typeof(OccupancyRequirementComponent))]
     [RequireComponent(typeof(PluginModulesComponent))]
@@ -66,13 +66,14 @@ namespace Eco.Mods.TechTree
         public virtual Type RepresentedItemType => typeof(BarnItem);
         public override LocString DisplayName => Localizer.DoStr("Barn");
         public override TableTextureMode TableTexture => TableTextureMode.Wood;
+         private static string[] fuelTagList = new[] { "Bale" }; //noloc
 
         protected override void Initialize()
         {
             this.ModsPreInitialize();
             this.GetComponent<MinimapComponent>().SetCategory(Localizer.DoStr("Crafting"));
-            this.GetComponent<PowerConsumptionComponent>().Initialize(10);
-            this.GetComponent<PowerGridComponent>().Initialize(5, new MechanicalPower());
+            this.GetComponent<FuelSupplyComponent>().Initialize(2, fuelTagList);
+            this.GetComponent<FuelConsumptionComponent>().Initialize(10);
             this.GetComponent<HousingComponent>().HomeValue = BarnItem.homeValue;
             this.ModsPostInitialize();
         }
@@ -93,16 +94,8 @@ namespace Eco.Mods.TechTree
     public partial class BarnItem : WorldObjectItem<BarnObject>, IPersistentData
     {
         protected override OccupancyContext GetOccupancyContext => new SideAttachedContext( 0  | DirectionAxisFlags.Down , WorldObject.GetOccupancyInfo(this.WorldObjectType));
-        public override HomeFurnishingValue HomeValue => homeValue;
-        public static readonly HomeFurnishingValue homeValue = new HomeFurnishingValue()
-        {
-            ObjectName                              = typeof(BarnObject).UILink(),
-            Category                                = HousingConfig.GetRoomCategory("Industrial"),
-            TypeForRoomLimit                        = Localizer.DoStr(""),
-            
-        };
 
-        [NewTooltip(CacheAs.SubType, 7)] public static LocString PowerConsumptionTooltip() => Localizer.Do($"Consumes: {Text.Info(10)}w of {new MechanicalPower().Name} power.");
+        [NewTooltip(CacheAs.SubType, 7)] public static LocString PowerConsumptionTooltip() => Localizer.Do($"Consumes: {Text.Info(10)}w of {new HeatPower().Name} power from fuel.");
         [Serialized, SyncToView, NewTooltipChildren(CacheAs.Instance, flags: TTFlags.AllowNonControllerTypeForChildren)] public object PersistentData { get; set; }
     }
 
