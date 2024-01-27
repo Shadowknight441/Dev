@@ -40,7 +40,7 @@ namespace Eco.Mods.TechTree
     [LocDisplayName("Baby Hare")] // Defines the localized name of the item.
     [Weight(10)] // Defines how heavy Baby Hare is.
     [Ecopedia("Natural Resources", "Animal", createAsSubPage: true)]
-    [LocDescription("A Baby Hare.")] //The tooltip description for the item.
+    [LocDescription("A Baby Diaper.")] //The tooltip description for the item.
     public partial class BabyHareItem : Item
     {
 
