@@ -85,25 +85,5 @@ namespace Eco.Mods.TechTree
         /// <summary>Hook for mods to customize RecipeFamily after initialization, but before registration. You can change skill requirements here.</summary>
         partial void ModsPostInitialize();
     }
-    
-    /// <summary>
-    /// <para>Server side item definition for the "BreedAngusCow" item.</para>
-    /// <para>More information about Item objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.Item.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
-    [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Slaughter Angus Cow")] // Defines the localized name of the item.
-    [Weight(2500)] // Defines how heavy Board is.
-    [Ecopedia("Items", "Food", createAsSubPage: true)]
-    [Tag("Slaughter Angus Cow")]
-    [Tag("Angus Cow Carcass")]
-    [LocDescription("A Cow you can bread purley for meat production")] //The tooltip description for the item.
-    public partial class AngusCowCarcassItem : Item
-    {
-
-
-    }
+   
 }
