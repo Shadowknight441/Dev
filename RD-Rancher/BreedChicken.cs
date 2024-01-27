@@ -69,7 +69,7 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(70, typeof(HuntingSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(BreedChickenRecipe), start: .5, skillType: typeof(HuntingSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(BreedChickenRecipe), start: 0.5f, skillType: typeof(HuntingSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "BreedBison"
             this.ModsPreInitialize();
