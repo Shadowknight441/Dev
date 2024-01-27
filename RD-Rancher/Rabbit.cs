@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
     [LocDescription("A Rabbit")] //The tooltip description for the item.
     public partial class RabbitItem : Item
     {
-
+        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
 
     }
 }

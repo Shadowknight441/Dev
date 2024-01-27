@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
     [LocDescription("A Chicken")] //The tooltip description for the item.
     public partial class ChickenItem : Item
     {
-
+        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
 
     }
 }
