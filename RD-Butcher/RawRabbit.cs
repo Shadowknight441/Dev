@@ -79,19 +79,15 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize();
     }
 
-}   
+   
 
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Raw Rabbit")] // Defines the localized name of the item.
     [Weight(100)] // Defines how heavy the RawMeat is.
-    [Ecopedia("Food", "Raw Rabbit", createAsSubPage: true)]
+    [Ecopedia("Food", "Raw Meat", createAsSubPage: true)]
     [LocDescription("Fresh raw meat from the hunt. It should probably be cooked before being consumed.")] //The tooltip description for the food item.
     public partial class RawRabbitItem : FoodItem
     {
-
-        /// <summary>The plural localization name for the food item.</summary>
-        public override LocString DisplayNamePlural     => Localizer.DoStr("Raw Rabbit");
-
         /// <summary>The amount of calories awarded for eating the food item.</summary>
         public override float Calories                  => 250;
         /// <summary>The nutritional value of the food item.</summary>
@@ -100,3 +96,4 @@ namespace Eco.Mods.TechTree
         /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
         protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(96);
     }
+}

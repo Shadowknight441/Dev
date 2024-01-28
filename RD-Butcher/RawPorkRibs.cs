@@ -30,20 +30,20 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [RequiresSkill(typeof(ButcherySkill), 1)]
-    public partial class RawAngusRoastRecipe : RecipeFamily
+    public partial class RawPorkRibsRecipe : RecipeFamily
     {
-        public RawAngusRoastRecipe()
+        public RawPorkRibsRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "PrepAngusRoast",  //noloc
-                displayName: Localizer.DoStr("Prep Angus Roast"),
+                name: "PrepPorkRibs",  //noloc
+                displayName: Localizer.DoStr("Prep Pork Ribs"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(AngusCowCarcassItem), 1, typeof(ButcherySkill), typeof(ButcheryLavishResourcesTalent)), //noloc
+                    new IngredientElement(typeof(PigCarcassItem), 1, typeof(ButcherySkill), typeof(ButcheryLavishResourcesTalent)), //noloc
                 },
 
                 // Define our recipe output items.
@@ -51,7 +51,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<RawAngusRoastItem>(2),
+                    new CraftingElement<RawPorkRibsItem>(2),
                     new CraftingElement<LeatherHideItem>(1),
                 });
             this.Recipes = new List<Recipe> { recipe };
@@ -61,11 +61,11 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(50, typeof(ButcherySkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(RawAngusSteakRecipe), start: 1.5f, skillType: typeof(ButcherySkill), typeof(ButcheryFocusedSpeedTalent), typeof(ButcheryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(RawPorkRibsRecipe), start: 1.5f, skillType: typeof(ButcherySkill), typeof(ButcheryFocusedSpeedTalent), typeof(ButcheryParallelSpeedTalent));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Butcher Medium Animal"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Prep Angus Roast"), recipeType: typeof(RawAngusSteakRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Prep Pork Ribs"), recipeType: typeof(RawPorkRibsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
@@ -79,19 +79,15 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize();
     }
 
-}   
+  
 
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Raw Angus Roast")] // Defines the localized name of the item.
+    [LocDisplayName("Raw Pork Ribs")] // Defines the localized name of the item.
     [Weight(100)] // Defines how heavy the RawMeat is.
-    [Ecopedia("Food", "Raw Angus Roast", createAsSubPage: true)]
+    [Ecopedia("Food", "Raw Meat", createAsSubPage: true)]
     [LocDescription("Fresh raw meat from the hunt. It should probably be cooked before being consumed.")] //The tooltip description for the food item.
-    public partial class RawAngusRoastItem : FoodItem
+    public partial class RawPorkRibsItem : FoodItem
     {
-
-        /// <summary>The plural localization name for the food item.</summary>
-        public override LocString DisplayNamePlural     => Localizer.DoStr("Raw Angus Roast");
-
         /// <summary>The amount of calories awarded for eating the food item.</summary>
         public override float Calories                  => 250;
         /// <summary>The nutritional value of the food item.</summary>
@@ -100,3 +96,4 @@ namespace Eco.Mods.TechTree
         /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
         protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(96);
     }
+}
