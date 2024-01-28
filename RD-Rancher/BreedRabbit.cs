@@ -97,7 +97,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Breed Rabbit")] // Defines the localized name of the item.
-    [Weight(2500)] // Defines how heavy Board is.
+    [Weight(10)] // Defines how heavy Board is.
     [Ecopedia("Items", "Product", createAsSubPage: true)]
     [Tag("Rabbit")]
     [Tag("Rabbit")]

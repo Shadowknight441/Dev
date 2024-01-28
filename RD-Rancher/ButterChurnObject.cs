@@ -139,10 +139,10 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(300, typeof(CarpentrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(20, typeof(CarpentrySkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ButterChurnRecipe), start: 5, skillType: typeof(CarpentrySkill), typeof(CarpentryFocusedSpeedTalent), typeof(CarpentryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(ButterChurnRecipe), start: 0.05f, skillType: typeof(CarpentrySkill), typeof(CarpentryFocusedSpeedTalent), typeof(CarpentryParallelSpeedTalent));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Arrastra"
             this.ModsPreInitialize();

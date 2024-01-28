@@ -29,15 +29,15 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(ButcherySkill), 1)]
-    public partial class RawPorkChopRecipe : RecipeFamily
+    [RequiresSkill(typeof(ButcherySkill), 3)]
+    public partial class RawPorkSteakRecipe : RecipeFamily
     {
-        public RawPorkChopRecipe()
+        public RawPorkSteakRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
-                name: "PrepRawPorkChop",  //noloc
-                displayName: Localizer.DoStr("Prep Raw Pork Chop"),
+                name: "PrepRawPorkSteaks",  //noloc
+                displayName: Localizer.DoStr("Prep Raw Pork Steaks"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -51,7 +51,7 @@ namespace Eco.Mods.TechTree
                 // to create.
                 items: new List<CraftingElement>
                 {
-                    new CraftingElement<RawPorkChopItem>(3),
+                    new CraftingElement<RawPorkSteakItem>(2),
                     new CraftingElement<LeatherHideItem>(1),
                 });
             this.Recipes = new List<Recipe> { recipe };
@@ -61,11 +61,11 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(50, typeof(ButcherySkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(RawPorkChopRecipe), start: 1.5f, skillType: typeof(ButcherySkill), typeof(ButcheryFocusedSpeedTalent), typeof(ButcheryParallelSpeedTalent));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(RawPorkSteakRecipe), start: 1.5f, skillType: typeof(ButcherySkill), typeof(ButcheryFocusedSpeedTalent), typeof(ButcheryParallelSpeedTalent));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Butcher Medium Animal"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Prep Raw Pork Chop"), recipeType: typeof(RawPorkChopRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Prep Raw Pork Steak"), recipeType: typeof(RawPorkSteakRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
@@ -79,5 +79,5 @@ namespace Eco.Mods.TechTree
         partial void ModsPostInitialize();
     }
 
-}   
-
+ 
+} 

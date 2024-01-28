@@ -115,7 +115,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(CarpentrySkill), 1)]
+    [RequiresSkill(typeof(CarpentrySkill), 2)]
     [Ecopedia("Work Stations", "Craft Tables", subPageName: "Nursery Item")]
     public partial class NurseryRecipe : RecipeFamily
     {
@@ -131,7 +131,6 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement("Wood", 5, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)), //noloc
-                    new IngredientElement("Rock", 30, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)), //noloc
                     new IngredientElement("WoodBoard", 10, typeof(CarpentrySkill), typeof(CarpentryLavishResourcesTalent)), //noloc
                 },
 
@@ -146,7 +145,7 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(300, typeof(CarpentrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(100, typeof(CarpentrySkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(NurseryRecipe), start: 5, skillType: typeof(CarpentrySkill), typeof(CarpentryFocusedSpeedTalent), typeof(CarpentryParallelSpeedTalent));

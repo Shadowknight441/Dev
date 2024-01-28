@@ -143,10 +143,10 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<BarnItem>()
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.
+            this.ExperienceOnCraft = 10; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(300, typeof(CarpentrySkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(150, typeof(CarpentrySkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(BarnRecipe), start: 5, skillType: typeof(CarpentrySkill), typeof(CarpentryFocusedSpeedTalent), typeof(CarpentryParallelSpeedTalent));
