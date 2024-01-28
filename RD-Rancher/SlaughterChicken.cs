@@ -95,11 +95,11 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Slaughter Chicken")] // Defines the localized name of the item.
+    [LocDisplayName("Chicken Carcass")] // Defines the localized name of the item.
     [Weight(10)] // Defines how heavy Board is.
     [Ecopedia("Items", "Food", createAsSubPage: true)]
-    [Tag("Slaughter Chicken")]
     [Tag("Chicken Carcass")]
+    [Tag("Poultry")]
     [LocDescription("A Chicken you can bread purley for meat production")] //The tooltip description for the item.
     public partial class ChickenCarcassItem : Item
     {
