@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
     [LocDescription("A Cow you can bread purley for meat production")] //The tooltip description for the item.
     public partial class AngusCowItem : Item
     {
-        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
+    
 
     }
 }

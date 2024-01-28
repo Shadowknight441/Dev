@@ -38,9 +38,9 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [RequiresSkill(typeof(SmeltingSkill), 2)]
     [Ecopedia("Items", "Products", subPageName: "Craft Sheers")]
-    public partial class CraftSheersRecipe : RecipeFamily
+    public partial class CraftSheerRecipe : RecipeFamily
     {
-        public CraftSheersRecipe()
+        public CraftSheerRecipe()
         {
             var recipe = new Recipe();
             recipe.Init(
@@ -68,11 +68,11 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(70, typeof(SmeltingSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(CraftSheersRecipe), start: 0.5f, skillType: typeof(SmeltingSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(CraftSheerRecipe), start: 0.5f, skillType: typeof(SmeltingSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "BreedAngusCow"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Craft Sheers"), recipeType: typeof(CraftSheersRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Craft Sheers"), recipeType: typeof(CraftSheerRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

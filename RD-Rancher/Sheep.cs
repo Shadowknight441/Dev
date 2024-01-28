@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
     [LocDescription("An animal that can be breed for its wool.")] //The tooltip description for the item.
     public partial class SheepItem : Item
     {
-        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
+        
 
     }
 }
