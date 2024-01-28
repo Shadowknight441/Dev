@@ -25,20 +25,20 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Raw Chicken Tenders")] // Defines the localized name of the item.
-    [Weight(20)] // Defines how heavy the RawMeat is.
+    [LocDisplayName("Raw Pork Steak")] // Defines the localized name of the item.
+    [Weight(50)] // Defines how heavy the RawMeat is.
     [Ecopedia("Food", "Raw Meat", createAsSubPage: true)]
     [LocDescription("Fresh raw meat from the hunt. It should probably be cooked before being consumed.")] //The tooltip description for the food item.
-    public partial class RawChickenTenderItem : FoodItem
+    public partial class RawPorkSteakItem : FoodItem
     {
 
         /// <summary>The plural localization name for the food item.</summary>
-        public override LocString DisplayNamePlural     => Localizer.DoStr("Raw Chicken Tender");
+        public override LocString DisplayNamePlural     => Localizer.DoStr("Raw Pork Steaks");
 
         /// <summary>The amount of calories awarded for eating the food item.</summary>
-        public override float Calories                  => 400;
+        public override float Calories                  => 600;
         /// <summary>The nutritional value of the food item.</summary>
-        public override Nutrients Nutrition             => new Nutrients() { Carbs = 0, Fat = 1, Protein = 2, Vitamins = 0};
+        public override Nutrients Nutrition             => new Nutrients() { Carbs = 0, Fat = 3, Protein = 8, Vitamins = 0};
 
         /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
         protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(96);

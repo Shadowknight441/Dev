@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(HunterSkill), 1)]
+    [RequiresSkill(typeof(HunterSkill), 3)]
     [Ecopedia("Items", "Products", subPageName: "Pig")]
     public partial class PigRecipe : RecipeFamily
     {
@@ -98,7 +98,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Pig")] // Defines the localized name of the item.
-    [Weight(2500)] // Defines how heavy Board is.
+    [Weight(500)] // Defines how heavy Board is.
     [Ecopedia("Items", "Product", createAsSubPage: true)]
     [Tag("Pig")]
     [Tag("Pig")]

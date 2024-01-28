@@ -55,13 +55,13 @@ namespace Eco.Mods.TechTree
                     new CraftingElement<GoatItem>(1),
                 });
             this.Recipes = new List<Recipe> { recipe };
-            this.ExperienceOnCraft = 1.0f; // Defines how much experience is gained when crafted.
+            this.ExperienceOnCraft = 5.0f; // Defines how much experience is gained when crafted.
 
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(50, typeof(HuntingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(70, typeof(HuntingSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(DomesticateMountainGoatRecipe), start: .50f, skillType: typeof(HuntingSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(DomesticateMountainGoatRecipe), start: 1.5f, skillType: typeof(HuntingSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Domesticate Bison"
             this.ModsPreInitialize();

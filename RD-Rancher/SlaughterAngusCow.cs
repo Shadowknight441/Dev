@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(RancherSkill), 3)]
+    [RequiresSkill(typeof(RancherSkill), 5)]
     [Ecopedia("Items", "Products", subPageName: "Slaughter Angus Cow")]
     public partial class SlaughterAngusCowRecipe : RecipeFamily
     {
@@ -68,7 +68,7 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(100, typeof(RancherSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(SlaughterAngusCowRecipe), start: 2, skillType: typeof(RancherSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(SlaughterAngusCowRecipe), start: 1.0f, skillType: typeof(RancherSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "SlaughterAngusCow"
             this.ModsPreInitialize();

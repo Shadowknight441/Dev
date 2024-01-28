@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(RancherSkill), 2)]
+    [RequiresSkill(typeof(RancherSkill), 4)]
     [Ecopedia("Items", "Products", subPageName: "Milk Cow")]
     public partial class MilkCowRecipe : RecipeFamily
     {
@@ -69,7 +69,7 @@ namespace Eco.Mods.TechTree
             this.LaborInCalories = CreateLaborInCaloriesValue(70, typeof(RancherSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(MilkCowRecipe), start: 5, skillType: typeof(RancherSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(MilkCowRecipe), start: 2, skillType: typeof(RancherSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "BreedAngusCow"
             this.ModsPreInitialize();
@@ -97,7 +97,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Milk Cow")] // Defines the localized name of the item.
-    [Weight(2500)] // Defines how heavy Board is.
+    [Weight(10)] // Defines how heavy Board is.
     [Ecopedia("Items", "Product", createAsSubPage: true)]
     [Tag("Milk Cow")]
     [Tag("Milk")]

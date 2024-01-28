@@ -38,7 +38,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Baby Bighorn Sheep")] // Defines the localized name of the item.
-    [Weight(10)] // Defines how heavy Baby Hare is.
+    [Weight(30)] // Defines how heavy Baby Hare is.
     [Ecopedia("Natural Resources", "Animal", createAsSubPage: true)]
     [LocDescription("A Baby Bighorn Sheep.")] //The tooltip description for the item.
     public partial class BabyBighornSheepItem : Item

@@ -65,7 +65,7 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(25, typeof(FarmingSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(50, typeof(FarmingSkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(HayBaleRecipe), start: 1.2f, skillType: typeof(FarmingSkill));
@@ -96,7 +96,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Hay Bale")] // Defines the localized name of the item.
-    [Weight(1000)] // Defines how heavy Hay Bale is.
+    [Weight(250)] // Defines how heavy Hay Bale is.
     [Fuel(20000)][Tag("Bedding")] // Marks Hay Bale as fuel item.
     [Ecopedia("Items", "Products", createAsSubPage: true)]
     [Tag("Bale")]

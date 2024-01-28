@@ -65,10 +65,10 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(20, typeof(RancherSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(30, typeof(RancherSkill));
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(SlaughterRabbitRecipe), start: 2, skillType: typeof(RancherSkill));
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(SlaughterRabbitRecipe), start: 0.5f, skillType: typeof(RancherSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "SlaughterAngusCow"
             this.ModsPreInitialize();
