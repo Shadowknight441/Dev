@@ -41,7 +41,7 @@ namespace Eco.Mods.TechTree
     [Weight(10)] // Defines how heavy BabyBison is.
     [Ecopedia("Natural Resources", "Animal", createAsSubPage: true)]
     [LocDescription("A Chicken")] //The tooltip description for the item.
-    public partial class ChickenItem : FoodItem
+    public partial class ChickenItem : Item
     {
        
 

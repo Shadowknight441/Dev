@@ -61,7 +61,6 @@ namespace Eco.Mods.TechTree
                 items: new List<CraftingElement>
                 {
                     new CraftingElement<ShornWoolItem>(3)
-                    new CraftingElement<SheerItem>(1)
                 });
             this.Recipes = new List<Recipe> { recipe };
             this.ExperienceOnCraft = 5; // Defines how much experience is gained when crafted.
