@@ -51,7 +51,7 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(WheatItem), 7, typeof(FarmingSkill)), //noloc
+                    new IngredientElement(("NaturalFiber"), 10, typeof(FarmingSkill)), //noloc
                 },
 
                 // Define our recipe output items.
@@ -76,7 +76,7 @@ namespace Eco.Mods.TechTree
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
-            CraftingComponent.AddRecipe(tableType: typeof(KilnObject), recipe: this);
+            CraftingComponent.AddRecipe(tableType: typeof(FarmersTableObject), recipe: this);
         }
 
         /// <summary>Hook for mods to customize RecipeFamily before initialization. You can change recipes, xp, labor, time here.</summary>

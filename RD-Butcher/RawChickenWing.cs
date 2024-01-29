@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
         public override LocString DisplayNamePlural     => Localizer.DoStr("Raw Chicken Wings");
 
         /// <summary>The amount of calories awarded for eating the food item.</summary>
-        public override float Calories                  => 400;
+        public override float Calories                  => 300;
         /// <summary>The nutritional value of the food item.</summary>
         public override Nutrients Nutrition             => new Nutrients() { Carbs = 0, Fat = 1, Protein = 2, Vitamins = 0};
 

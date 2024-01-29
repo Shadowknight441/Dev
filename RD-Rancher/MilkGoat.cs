@@ -96,12 +96,12 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Milk Goat")] // Defines the localized name of the item.
+    [LocDisplayName("Goat Milk")] // Defines the localized name of the item.
     [Weight(10)] // Defines how heavy Board is.
     [Ecopedia("Items", "Product", createAsSubPage: true)]
-    [Tag("Milk Goat")]
-    [Tag("Milk")]
-    [LocDescription("A Cow you can bread purley for meat production")] //The tooltip description for the item.
+    [Tag("Goat Milk")]
+    [Tag("Animal Milk")]
+    [LocDescription("A tastey substance you can drink or make into other products")] //The tooltip description for the item.
     public partial class GoatMilkItem : Item
     {
 

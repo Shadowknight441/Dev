@@ -81,7 +81,7 @@ namespace Eco.Mods.TechTree
                 
                 // Behavior
                 this.BrainType = typeof(HerdAnimalBrain);
-                this.Health = 2;
+                this.Health = 12;
                 this.Damage = 1;
                 this.DelayBetweenAttacksRangeSec = new Range(0.8f, 2.5f);
                 this.FearFactor = 0.6f;

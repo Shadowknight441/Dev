@@ -39,11 +39,20 @@ namespace Eco.Mods.TechTree
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Egg")] // Defines the localized name of the item.
     [Weight(10)] // Defines how heavy Baby Hare is.
-    [Ecopedia("Natural Resources", "Item", createAsSubPage: true)]
+    [Ecopedia("Food", "Items", createAsSubPage: true)]
     [LocDescription("An egg to egg your neighbors house.")] //The tooltip description for the item.
-    public partial class EggItem : Item
+    public partial class EggItem : FoodItem
     {
+         /// <summary>The plural localization name for the food item.</summary>
+        public override LocString DisplayNamePlural     => Localizer.DoStr("Egg");
 
+        /// <summary>The amount of calories awarded for eating the food item.</summary>
+        public override float Calories                  => 50;
+        /// <summary>The nutritional value of the food item.</summary>
+        public override Nutrients Nutrition             => new Nutrients() { Carbs = 0, Fat = 0, Protein = 1, Vitamins = 0};
+
+        /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
+        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(96);
 
     }
 }
